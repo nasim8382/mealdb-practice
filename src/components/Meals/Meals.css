@@ -1,6 +1,6 @@
 .meals-container {
-    display: flex;
-    grid-template-columns: 3fr 2fr;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
     grid-gap: 50px;
     margin: 100px 50px;
 }
@@ -10,4 +10,65 @@
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 70px;
     margin: auto;
+}
+
+.order-cart {
+    background-color: rgba(181, 223, 190, 0.644);
+    width: 350px;
+    height: 550px;
+    position: sticky;
+    top: 0;
+    border-radius: 90px 5px;
+}
+
+.cart {
+    color: crimson;
+    font-family: cursive;
+    padding: 60px;
+}
+
+.cart h1 {
+    font-size: 28px;
+    color: blueviolet;
+}
+
+.cart li {
+    list-style-type: square;
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    .meals-container{
+        display: flex;
+        flex-direction: column-reverse;
+        margin: auto;
+    }
+    .meals-details {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        margin: auto;
+        margin-bottom: 100px;
+    }
+    .order-cart {
+        margin: auto;
+        position: static;
+        margin-top: 50px;
+    }
+}
+
+@media only screen and (min-width:769px) and ( max-width: 1024px) {
+    .meals-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 50px;
+    }
+    .meals-details {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 70px;
+        width: 300px;
+        margin: auto;
+        margin-bottom: 100px;
+    }
 }
